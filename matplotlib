@@ -1,0 +1,151 @@
+{
+ "cells": [
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "4aef6a85",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import warnings\n",
+    "\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import matplotlib as mpl\n",
+    "import seaborn as sns\n",
+    "\n",
+    "from sklearn.model_selection import train_test_split,GridSearchCV\n",
+    "from sklearn.preprocessing import StandardScaler\n",
+    "from sklearn.tree import DecisionTreeClassifier\n",
+    "from sklearn import tree\n",
+    "from sklearn.ensemble import GradientBoostingClassifier\n",
+    "from sklearn.svm import SVC\n",
+    "from sklearn.ensemble import RandomForestClassifier\n",
+    "\n",
+    "from sklearn import metrics\n",
+    "from sklearn.metrics import confusion_matrix,classification_report,ConfusionMatrixDisplay\n",
+    "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score\n",
+    "from sklearn.model_selection import KFold,StratifiedKFold\n",
+    "from sklearn.model_selection import cross_val_score, cross_validate\n",
+    "\n",
+    "# for visuallization\n",
+    "import plotly.express as px"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b6c9da60",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import warnings\n",
+    "\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import matplotlib as mpl\n",
+    "import seaborn as sns\n",
+    "\n",
+    "from sklearn.model_selection import train_test_split,GridSearchCV\n",
+    "from sklearn.preprocessing import StandardScaler\n",
+    "from sklearn.tree import DecisionTreeClassifier\n",
+    "from sklearn import tree\n",
+    "from sklearn.ensemble import GradientBoostingClassifier\n",
+    "from sklearn.svm import SVC\n",
+    "from sklearn.ensemble import RandomForestClassifier\n",
+    "\n",
+    "from sklearn import metrics\n",
+    "from sklearn.metrics import confusion_matrix,classification_report,ConfusionMatrixDisplay\n",
+    "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score\n",
+    "from sklearn.model_selection import KFold,StratifiedKFold\n",
+    "from sklearn.model_selection import cross_val_score, cross_validate\n",
+    "\n",
+    "# for visuallization\n",
+    "import plotly.express as px"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "4a793dfd",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "%notebook matplotlib\n",
+    "from warnings import filterwarnings\n",
+    "filterwarnings('ignore')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "3ab767fb",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "%notebook matplotlib\n",
+    "from warnings import filterwarnings\n",
+    "filterwarnings('ignore')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "a20a240d",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "train=pd.read_csv('./archive/train.csv')\n",
+    "test=pd.read_csv('./archive/test.csv')"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "f23f6849",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "train"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "e07d32d1",
+   "metadata": {},
+   "outputs": [],
+   "source": [
+    "import warnings\n",
+    "\n",
+    "import numpy as np\n",
+    "import pandas as pd\n",
+    "import matplotlib.pyplot as plt\n",
+    "import matplotlib as mpl\n",
+    "import seaborn as sns\n",
+    "\n",
+    "from sklearn.model_selection import train_test_split,GridSearchCV\n",
+    "from sklearn.preprocessing import StandardScaler\n",
+    "from sklearn.tree import DecisionTreeClassifier\n",
+    "from sklearn import tree\n",
+    "from sklearn.ensemble import GradientBoostingClassifier\n",
+    "from sklearn.svm import SVC\n",
+    "from sklearn.ensemble import RandomForestClassifier\n",
+    "\n",
+    "from sklearn import metrics\n",
+    "from sklearn.metrics import confusion_matrix,classification_report,ConfusionMatrixDisplay\n",
+    "from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score\n",
+    "from sklearn.model_selection import KFold,StratifiedKFold\n",
+    "from sklearn.model_selection import cross_val_score, cross_validate\n",
+    "\n",
+    "# for visuallization\n",
+    "import plotly.express as px"
+   ]
+  }
+ ],
+ "metadata": {},
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
